@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>StudyUp - Organizador de Estudos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>StudyUp</h1>
+            <div class="sub">Organize seu tempo, domine suas metas 📖🎯</div>
+        </div>
+
+        <div class="grid">
+            <!-- CARD CRONÔMETRO -->
+            <div class="card">
+                <h2>⏱️ Cronômetro de Estudo</h2>
+                <div class="timer-display">
+                    <div class="timer-digits" id="timerDisplay">00:00:00</div>
+                </div>
+                <div class="timer-controls">
+                    <button id="startTimerBtn" class="primary">▶ Iniciar</button>
+                    <button id="pauseTimerBtn" class="secondary">⏸ Pausar</button>
+                    <button id="resetTimerBtn" class="warning">🔄 Zerar</button>
+                </div>
+                <p style="font-size: 0.75rem; color:#475569; text-align:center">Foco total! Use para bloquear sessões de estudo.</p>
+            </div>
+
+            <!-- CARD MATÉRIAS (estudando) -->
+            <div class="card">
+                <h2>📘 Matérias em Estudo</h2>
+                <div class="subject-input-group">
+                    <input type="text" id="subjectNameInput" placeholder="Ex: Matemática, História...">
+                    <button id="addSubjectBtn" class="primary">➕ Adicionar</button>
+                </div>
+                <ul id="subjectsList" class="subjects-list">
+                    <li class="empty-message">Nenhuma matéria adicionada ainda.</li>
+                </ul>
+                <small style="color:#4b5563">✏️ Gerencie suas disciplinas ativas</small>
+            </div>
+
+            <!-- CARD AVISOS -->
+            <div class="card">
+                <h2>📢 Avisos & Lembretes</h2>
+                <div id="noticesContainer">
+                    <div class="empty-message">Sem avisos por enquanto.</div>
+                </div>
+                <div class="add-notice">
+                    <input type="text" id="noticeInput" placeholder="Ex: Revisar matemática amanhã!">
+                    <button id="addNoticeBtn" class="primary">➕ Incluir Aviso</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- METAS (segunda linha) -->
+        <div class="card" style="margin-top: 0.2rem;">
+            <h2>🎯 Metas de Estudo</h2>
+            <div id="goalsContainer">
+                <div class="empty-message">Nenhuma meta definida. Crie uma meta e marque como concluída!</div>
+            </div>
+            <div class="add-goal">
+                <input type="text" id="goalNameInput" placeholder="Descreva a meta (ex: Terminar capítulo 3)">
+                <button id="addGoalBtn" class="primary">✨ Nova Meta</button>
+            </div>
+            <hr>
+            <div style="font-size:0.8rem; display:flex; justify-content:space-between;">
+                <span>✅ Metas cumpridas: <strong id="completedCount">0</strong></span>
+                <span>📌 Total: <strong id="totalGoalsCount">0</strong></span>
+            </div>
+        </div>
+        <footer>StudyUp • Foco, organização e evolução constante 🚀</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
